@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Attendance & Timings Entry | FiveSch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Daily Bus Record Entry</h2>
+  <form id="recordForm">
+    <label>Date: <input type="date" id="date" required></label>
+    <label>Submitted By: <input type="text" id="submitted" required></label>
+
+    <h3>Bus Timings</h3>
+    <table id="busTimingTable">
+      <thead>
+        <tr><th>Bus</th><th>Arrival</th><th>Drop</th><th>Action</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" onclick="addBusRow()">Add Bus Row</button>
+
+    <label>Reason for Delay: <input type="text" id="delay"></label>
+    <h3>Drivers & Guards Attendance</h3>
+    <label>Drivers Expected: <input type="number" id="drvExpected" min="0"></label>
+    <label>Drivers Present: <input type="number" id="drvPresent" min="0"></label>
+    <label>Guards Expected: <input type="number" id="guardExpected" min="0"></label>
+    <label>Guards Present: <input type="number" id="guardPresent" min="0"></label>
+
+    <h4>Spare Drivers</h4>
+    <input type="text" id="spare1" placeholder="Spare Driver 1">
+    <input type="text" id="spare2" placeholder="Spare Driver 2">
+
+    <label>Incidents: <input type="text" id="incidents"></label>
+    <label>Complaint: <input type="text" id="complaint"></label>
+
+    <button type="submit">Save / Update</button>
+    <button type="button" onclick="exportCSV()">Export as CSV</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 30px; }
+label { display: block; margin-top: 8px; }
+table, th, td { border: 1px solid #999; border-collapse: collapse; padding: 6px;}
+th { background: #efefef; }
+button { margin-top: 12px }
+input { margin: 4px }
